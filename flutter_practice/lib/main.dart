@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice/pages/buttons.dart';
+import 'package:flutter_practice/pages/center.dart';
+import 'package:flutter_practice/pages/column.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +19,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: ButtonsPage(),
-      
+      routes:{
+        "/buttons": (context) => ButtonsPage(),
+        "/column": (context) => ColumnPage(),
+        '/center': (context) => centerPage(),
+      },
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.black87,
         primarySwatch: Colors.blue,
